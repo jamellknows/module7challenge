@@ -54,29 +54,16 @@ let template =
 
 
 <div class="container schedule">
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><div class=" col eventBlock"></div><div class=" col saveBlock"></div></div>
-  
-
+    <div class="row"><div class=" col-2 timeBlock">9am</div><div class=" col-8 eventBlock"></div><div class=" col-2 saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">10am</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">11am</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">12am</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">1pm</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">2pm</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">3pm</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">4pm</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">5pm</div><div class=" col-8 eventBlock"></div><div class=" col saveBlock"></div></div>
+    
 
 </div>
 </div>

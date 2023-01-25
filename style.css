@@ -78,8 +78,20 @@ textarea {
   padding-top: 24px;
   
 }
-.hourBlock{
-  border: 5px black solid;
+.eventBlock{
+  background-color: lightgrey;
+  border: 3px black solid;
   font-size: 34px;
-  color: red;
+}
+
+.saveBlock{
+  background-color:lightblue;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.schedule{
+  width: 100vw;
+  margin-left: 25px;
+  
 }
