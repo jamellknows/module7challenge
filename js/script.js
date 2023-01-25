@@ -52,16 +52,16 @@ let template =
 
 
 
-<div class="container schedule">
+<div id="planner" class="container schedule">
     <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
     
 
 </div>
@@ -73,24 +73,34 @@ console.log(momentDate.toLocaleString())
 let dateString = currentDayText.slice(0,10)
 let timeString = currentDayText.slice(12,17)
 currentDayEl.textContent = `${dateString}  ${timeString}`
-
-// $(function(){
-//     $('.main').append(template)
-//     $('.days').on(function(){
-//         if(this.text().slice(0,2) == today){
-
-//         }
-//     })
-// })
-
+let planner = document.getElementById('planner')
 $('.main').append(template)
 
 $( document ).ready( function(){
-    $('eventBlock')
+
+    
 
 })
 $('.eventBlock').click(function(){
 })
+$(function(){
+    $.each(schedule, function(index){
+        if(schedule[index][0].info.time){
+            let time = $(this)[0].info.time
+            let entry = $(this)[0].info.event
+            let timeEntry = $(`#${time}`)
+            timeEntry.val(entry)
+            
+
+
+            //timeEntry.prevObject[0].text(entry)
+            
+            
+        }
+    })
+
+})
+
 $('.saveBlock').click(function(){
     let event = $(this).siblings()[1]
     let eventValue = $(event).val()
