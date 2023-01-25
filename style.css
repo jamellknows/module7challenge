@@ -73,13 +73,13 @@ textarea {
 
 
 .timeBlock{
-  border-top: 5px black dotted;
-  border-right: 3px black solid;
+  border-top: 3px black dotted;
   padding-top: 24px;
   
 }
 .eventBlock{
   background-color: lightgrey;
+  border-left: none;
   border: 3px black solid;
   font-size: 34px;
 }
