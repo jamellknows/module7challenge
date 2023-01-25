@@ -8,9 +8,12 @@ var momentDate = moment._d
   // _d gives you the full day 
 
 let schedule = JSON.parse(localStorage.getItem("workday"))
-console.log(schedule)
 if(schedule === null){
-    schedule = {}
+    schedule = []
+    console.log("new schedule")
+}
+else{
+    console.log(schedule)
 }
 
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -50,15 +53,15 @@ let template =
 
 
 <div class="container schedule">
-    <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class=" col-8 eventBlock"></input><div class=" col-2 saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">10am</div><input id="10AM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">11am</div><input id="11AM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">12am</div><input id="12AM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">1pm</div><input id="1PM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">2pm</div><input id="2PM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">3pm</div><input id="3PM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">4pm</div><input id="4PM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col timeBlock">5pm</div><input id="5PM"class=" col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
     
 
 </div>
@@ -82,33 +85,56 @@ currentDayEl.textContent = `${dateString}  ${timeString}`
 
 $('.main').append(template)
 
+$( document ).ready( function(){
+    $('eventBlock')
 
+})
 $('.eventBlock').click(function(){
 })
-
 $('.saveBlock').click(function(){
     let event = $(this).siblings()[1]
-    let value = $(event).val()
+    let eventValue = $(event).val()
     let time = $(event).attr('id').toString()
-    let entryValue = {}
-
-    entryValue = {
-        dateEntry: dateEntry, 
-        info: {
-            time: time, 
-            entry: value
-        }
-    }
-    schedule = Object.assign(schedule, entryValue)
-    schedule = JSON.stringify(schedule)
-    console.log(schedule)
     
-    localStorage.setItem("workday",schedule)
+    $.each(schedule, function(index, value){
+        if(schedule[index] != null){
+            if(schedule[index][0].dateEntry == dateEntry && schedule[index][0].info.time == time)
+            {
+                delete schedule[index]
+            }
+        }
+       
+    })
+    
+    schedule = schedule.filter(n => n) 
+    entryValue = [
+        {dateEntry : dateEntry,
+            info:{
+                time: time,
+                event: eventValue
 
-   
+            }
+        }
+        ]
+     
+    
+
+    schedule.push(entryValue)
+  
+    console.log(schedule)
+    let jsonSchedule = JSON.stringify(schedule)
+
+    localStorage.setItem("workday",jsonSchedule)
 
 })
 // $('.eventBlock').on(function(){
 //     if(schedule[`${time}`])
 // })
 // add event listener in jquery if day == today change circle and caluclate the other dates from it 
+// $.each(schedule, function(index, value){
+    // if(schedule[index][0].info.time == time){
+    //     schedule[index][0].info.event = value
+    // }
+    // console.log(schedule[index][0].info.event)
+
+//})
