@@ -30,38 +30,40 @@ let todayAbbr = today.slice(0,2)
 let todayNumber = momentDate.getDate()
 let currentDayText = momentDate.toLocaleString()
 let yearText = currentDayText.slice(6,10)
-let x = "placeHolder"
+// let x = `<button onclick=previous()>previous day</button><br><button onclick="next()">next day</button>`
 let monthYear = `${month} ${yearText}`
 let dateNumber = 10
 let circleEl = `<i class="fa-regular fa-circle">${dateNumber}</i>`
 let dateEntry = momentDate.toLocaleString().slice(0,10)
+let hour = momentDate.getHours()
+console.log(hour)
 let template = 
 `
 <div class="container">
 <h1>${monthYear}</h1>
-<h2 class="buttonBlock ">${today} ${todayNumber}</h2> <div>${x}</div>
+<h2 class="buttonBlock ">${today} ${todayNumber}</h2> 
 <div class="row header">
- <div class="col days">${days[0].slice(0,3)}<br><i class="fa-regular fa-circle sun"></i></div>
- <div class="col days">${days[1].slice(0,3)}<i class="fa-regular fa-circle mon"></i></div>
- <div class="col days">${days[2].slice(0,3)}<i class="fa-regular fa-circle tue"></i></div>
- <div class="col days">${days[3].slice(0,3)}<i class="fa-regular fa-circle wed"></i></div>
- <div class="col days">${days[4].slice(0,3)}<i class="fa-regular fa-circle thu"></i></div>
- <div class="col days">${days[5].slice(0,3)}<i class="fa-regular fa-circle fri"></i></div>
- <div class="col days">${days[6].slice(0,3)}<i class="fa-regular fa-circle sat"></i></div>
+ <div class="col days">${days[0].slice(0,3)}<br></div>
+ <div class="col days">${days[1].slice(0,3)}</div>
+ <div class="col days">${days[2].slice(0,3)}</div>
+ <div class="col days">${days[3].slice(0,3)}</div>
+ <div class="col days">${days[4].slice(0,3)}</div>
+ <div class="col days">${days[5].slice(0,3)}</div>
+ <div class="col days">${days[6].slice(0,3)}</div>
 </div>
 
 
 
 <div id="planner" class="container schedule">
-    <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
-    <div class="row"><div class=" col-2 timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"></div></div>
+    <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
     
 
 </div>
@@ -69,34 +71,37 @@ let template =
 
 
 `
-console.log(momentDate.toLocaleString())
 let dateString = currentDayText.slice(0,10)
 let timeString = currentDayText.slice(12,17)
 currentDayEl.textContent = `${dateString}  ${timeString}`
 let planner = document.getElementById('planner')
 $('.main').append(template)
 
-$( document ).ready( function(){
 
-    
-
-})
-$('.eventBlock').click(function(){
-})
 $(function(){
     $.each(schedule, function(index){
-        if(schedule[index][0].info.time){
-            let time = $(this)[0].info.time
-            let entry = $(this)[0].info.event
-            let timeEntry = $(`#${time}`)
-            timeEntry.val(entry)
-            
-
-
-            //timeEntry.prevObject[0].text(entry)
-            
-            
+        if(schedule[index][0].dateEntry == dateEntry){
+            if(schedule[index][0].info.time){
+                let time = $(this)[0].info.time
+                let entry = $(this)[0].info.event
+                let timeEntry = $(`#${time}`)
+                timeEntry.val(entry)
+                timeEntry.css('background-color', 'lightgreen')
+                
+    
+    
+            }
         }
+     
+    })
+    if(hour > 12){
+        hour = hour - 10
+    }
+
+    $.each($('.eventBlock'), function(index){
+        if($(this)[0].id.slice(0,-2) < hour){
+            $(this).css('background-color', 'red')
+    }
     })
 
 })
@@ -137,14 +142,14 @@ $('.saveBlock').click(function(){
     localStorage.setItem("workday",jsonSchedule)
 
 })
-// $('.eventBlock').on(function(){
-//     if(schedule[`${time}`])
-// })
-// add event listener in jquery if day == today change circle and caluclate the other dates from it 
-// $.each(schedule, function(index, value){
-    // if(schedule[index][0].info.time == time){
-    //     schedule[index][0].info.event = value
-    // }
-    // console.log(schedule[index][0].info.event)
 
-//})
+
+// function previous(){
+//     moment = moment.subtract(1, 'days')
+//     console.log(moment)
+
+// }
+
+// function next(){
+//     moment = moment.add(1, 'days')
+// }
