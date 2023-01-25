@@ -1,87 +1,70 @@
-g# Third-Party APIs: Work Day Scheduler
+# Module 7 Challenge: Code Quiz
+## Overview
 
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
-## User Story
-
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-The app should:
-
-* Display the current day at the top of the calender when a user opens the planner.
- 
-* Present timeblocks for standard business hours when the user scrolls down.
- 
-* Color-code each timeblock based on past, present, and future when the timeblock is viewed.
- 
-* Allow a user to enter an event when they click a timeblock
-
-* Save the event in local storage when the save button is clicked in that timeblock.
-
-* Persist events between refreshes of a page
-
-The following animation demonstrates the application functionality:
-
-![A user clicks on slots on the color-coded calendar and edits the events.](./images/05-third-party-apis-homework-demo.gif)
+A workday scheduler for professionals as demonstrated in the demo below. 
+This challenge focused on using the Moment.js api with jQuery. 
 
 
-## Grading Requirements
 
-This homework is graded based on the following criteria: 
+## Instructions
 
-### Technical Acceptance Criteria: 40%
+The following image shows a demo web application's appearance and functionality:
 
-* Satisfies all of the above acceptance criteria plus the following:
+![work day demo](./images/05-third-party-apis-homework-demo.gif)
 
-  * Uses a date utility library to work with date and time
 
-### Deployment: 32%
 
-* Application deployed at live URL
 
-* Application loads with no errors
 
-* Application GitHub URL submitted
+## Instructions
 
-* GitHub repo contains application code
+Click on the grey box to enter an event
+Click on the blue save box to save
 
-### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+### Deployed At:
 
-* Application user interface style is clean and polished
+https://jamellknows.github.io/module7challenge/
 
-* Application resembles the mock-up functionality provided in the homework instructions
 
-### Repository Quality: 13%
+## License
 
-* Repository has a unique name
+MIT License
 
-* Repository follows best practices for file structure and naming conventions
+Copyright (c) [2022] [jamellknows]
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Repository contains multiple descriptive commit messages
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-## Review
 
-You are required to submit the following for review:
 
-* The URL of the deployed application
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+
+## Features
+
+* web API's
+* sound effects
+* high scores
+* Easy to use UI
+
+
 
 ---
+
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
