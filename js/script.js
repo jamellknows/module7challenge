@@ -98,14 +98,44 @@ $(function(){
      
     })
     if(hour > 12){
-        hour = hour - 12
+        hour = hour 
     }
     $.each($('.eventBlock'), function(index){
-        if($(this)[0].id.slice(0,2) == hour){
+        if($(this)[0].id.slice(0,-2) == hour){
             $(this).css('background-color', 'lightgreen')
         }
-        if($(this)[0].id.slice(0,2) <= hour){
-
+        if((Number($(this)[0].id.slice(0,-2)))>=9){
+            let idTime = $(this)[0].id.slice(0,-2)
+            idTime = Number(idTime) + 12
+            console.log(idTime + " " + hour)
+            if(idTime < hour){
+                $(this).css('background-color', 'grey')
+            }
+            if(idTime == hour){
+                $(this).css('background-color', 'lightgreen')
+            }
+            if(idTime > hour){
+                $(this).css('background-color', 'red')
+            }
+            
+                   
+    }
+        
+        if((Number($(this)[0].id.slice(0,-2))) <= 5){
+                let idTime = $(this)[0].id.slice(0,-2)
+                idTime = Number(idTime) + 12
+                console.log(idTime + " " + hour)
+                if(idTime < hour){
+                    $(this).css('background-color', 'red')
+                }
+                if(idTime == hour){
+                    $(this).css('background-color', 'lightgreen')
+                }
+                if(idTime > hour){
+                    $(this).css('background-color', 'grey')
+                }
+                
+                       
         }
     })
          
