@@ -109,13 +109,13 @@ $(function(){
             idTime = Number(idTime) + 12
             console.log(idTime + " " + hour)
             if(idTime < hour){
-                $(this).css('background-color', 'grey')
+                $(this).css('background-color', 'lightblue')
             }
             if(idTime == hour){
                 $(this).css('background-color', 'lightgreen')
             }
             if(idTime > hour){
-                $(this).css('background-color', 'red')
+                $(this).css('background-color', 'grey')
             }
             
                    
@@ -126,13 +126,13 @@ $(function(){
                 idTime = Number(idTime) + 12
                 console.log(idTime + " " + hour)
                 if(idTime < hour){
-                    $(this).css('background-color', 'red')
+                    $(this).css('background-color', 'grey')
                 }
                 if(idTime == hour){
                     $(this).css('background-color', 'lightgreen')
                 }
                 if(idTime > hour){
-                    $(this).css('background-color', 'grey')
+                    $(this).css('background-color', 'lightblue')
                 }
                 
                        
