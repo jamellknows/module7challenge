@@ -86,8 +86,9 @@ textarea {
 
 .saveBlock{
   background-color:lightblue;
-  border-top-right-radius: 30%;
-  border-bottom-right-radius: 30%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
+  
 }
 
 .schedule{

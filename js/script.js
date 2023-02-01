@@ -37,6 +37,7 @@ let circleEl = `<i class="fa-regular fa-circle">${dateNumber}</i>`
 let dateEntry = momentDate.toLocaleString().slice(0,10)
 let hour = momentDate.getHours()
 console.log(hour)
+
 let template = 
 `
 <div class="container">
@@ -55,7 +56,7 @@ let template =
 
 
 <div id="planner" class="container schedule">
-    <div class="row"><div class=" col-2 timeBlock">9am</div><input id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">9am</div><input   id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"><i class="fas fa-save"></i></div></div>
     <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
     <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
     <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
@@ -82,6 +83,8 @@ $(function(){
     $.each(schedule, function(index){
         if(schedule[index][0].dateEntry == dateEntry){
             if(schedule[index][0].info.time){
+                console.log(schedule[index][0].info.time)
+                console.log(schedule[index][0].info.time)
                 let time = $(this)[0].info.time
                 let entry = $(this)[0].info.event
                 let timeEntry = $(`#${time}`)
@@ -95,14 +98,24 @@ $(function(){
      
     })
     if(hour > 12){
-        hour = hour - 10
+        hour = hour - 12
     }
-
     $.each($('.eventBlock'), function(index){
-        if($(this)[0].id.slice(0,-2) < hour){
-            $(this).css('background-color', 'red')
-    }
+        if($(this)[0].id.slice(0,2) == hour){
+            $(this).css('background-color', 'lightgreen')
+        }
+        if($(this)[0].id.slice(0,2) <= hour){
+
+        }
     })
+         
+    
+    
+
+
+    $("#datepicker").datepicker()
+    console.log($(".selector").datepicker("getDate"))
+    
 
 })
 
@@ -110,6 +123,8 @@ $('.saveBlock').click(function(){
     let event = $(this).siblings()[1]
     let eventValue = $(event).val()
     let time = $(event).attr('id').toString()
+    console.log($(".selector").datepicker("getDate"))
+
     
     $.each(schedule, function(index, value){
         if(schedule[index] != null){
