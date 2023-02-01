@@ -56,15 +56,15 @@ let template =
 
 
 <div id="planner" class="container schedule">
-    <div class="row"><div class=" col-2 timeBlock">9am</div><input   id="9AM" class="col-8 eventBlock"></input><div class=" col-2 saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
-    <div class="row"><div class=" col-2 timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class=" col saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">9am</div><input   id="9AM" class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">10am</div><input  id="10AM" class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">11am</div><input  id="11AM" class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">12am</div><input  id="12AM" class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">1pm</div><input   id="1PM"   class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">2pm</div><input   id="2PM"   class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">3pm</div><input   id="3PM"   class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">4pm</div><input   id="4PM"   class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
+    <div class="row"><div class=" col-2 timeBlock">5pm</div><input   id="5PM"    class="col-8 eventBlock"></input><div class="col-1 saveBlock"><i class="fas fa-save"></i></div></div>
     
 
 </div>
