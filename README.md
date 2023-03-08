@@ -1,4 +1,5 @@
-# Module 7 Challenge: Code Quiz
+# Module 7 Challenge: Work Day Scheduler
+
 ## Overview
 
 A workday scheduler for professionals as demonstrated in the demo below. 
